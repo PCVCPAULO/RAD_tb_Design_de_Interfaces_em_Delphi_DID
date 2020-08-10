@@ -1,0 +1,77 @@
+{
+	Incorporando Formulários em um Layout
+	por Marcos Vinicius Braga
+}
+
+function TFormAula02_1.LoadForm(AClass: TFormClass): TFormAula02_1;
+begin
+	Result := Self;
+
+{ Técnica que funciona no VCL e não no FireMonkey}
+
+	Self.FreeAndNilObjects;
+	
+	FFormActive := AClass.Create(LayoutEmbebedObjects);
+	{ Layout incorpora o Form}
+	FFormActive.Parent := LayoutEmbebedObjects;
+	LayoutEmbebedObjects.AddObject(FFormActive);
+	{ ajustes}
+	FFormActive.Top := 0;
+	FFormActive.Left := 0;
+	FFormActive.Height := Round(LayoutEmbebedObjects.Height);
+	FFormActive.Width := Round(LayoutEmbebedObjects.Width);
+	FFormActive.Show;
+	
+	{MultiViewMenu.HideMaster;}
+end;
+
+	{ Método para limpar um Form que já foi carregado}
+
+function TFormAula02_1.ClearLayout: TFormAula02_1;
+begin
+	Result := Self;
+	if Assigned(FFormLayout) then
+	begin
+		while LayoutEmbebedObjects.ChildrenCount > 0 do
+		begin
+			LayoutEmbebedObjects.RemoveObject(LayoutEmbebedObjects.Children[0]);
+		end;
+	end;
+end;
+
+	{ Método que fará a carga}
+
+function TFormAula02_1.LoadMainLayoutForm(const AFormClass: TComponentClass): TFormAula02_1;
+var
+	LComponent: TComponent;
+begin
+	Result := Self.FreeAndNilObjects;
+	
+	Application.CreateForm(AFormClass, FFormLayout);
+	LComponent := FFormLayout.FindComponent('LayoutMain');
+	if Assigned(LComponent) then
+	begin
+		LayoutEmbebedObjects.AddObject(TLayout(LComponent));
+	end;
+	{MultiViewMenu.HideMaster;}
+end;
+
+
+{ Aqui o Thulio criou uma classe, mas para aplicar na VCL será preciso substituir
+  o objeto "LayoutMain" por um "PanelMain", utilizando-se da propriedade "Parent".
+  O que a propriedade "Parent" faz? 
+  - Ela joga o formulário externo de um Container "TPanel".
+}
+class procedure TClasseLoad.LoadLayout(const LayoutMain: TLayout;
+  const AFormClass: TComponentClass);
+var
+  LComponent : TComponent;
+  FFormLayout : TForm;
+begin
+  Application.CreateForm(AFormClass, FFormLayout);
+  LComponent := FFormLayout.FindComponent('LayoutMain');
+  if Assigned(LComponent) then
+  begin
+    LayoutMain.AddObject(TLayout(LComponent));
+  end;
+end;

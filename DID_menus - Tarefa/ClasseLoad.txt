@@ -1,0 +1,36 @@
+unit ClasseLoad;
+
+interface
+
+uses
+  System.Classes, FMX.Layouts;
+
+type
+
+    TClasseLoad = class
+      class procedure LoadPanel(const PanelMain : TPanel; const AFormClass : TComponentClass);
+    end;
+
+implementation
+
+uses
+  FMX.Forms;
+
+{ TClasseLoad }
+
+class procedure TClasseLoad.LoadPanel(const PanelMain: TPanel;
+  const AFormClass: TComponentClass);
+var
+  LComponent : TComponent;
+  FFormPanel : TForm;
+begin
+  Application.CreateForm(AFormClass, FFormPanel);
+  LComponent := FFormPanel.FindComponent('PanelMain');
+  if Assigned(LComponent) then
+  begin
+    PanelMain.Parent(TPanel(LComponent));
+  end;
+
+end;
+
+end.

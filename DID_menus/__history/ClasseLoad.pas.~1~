@@ -1,0 +1,24 @@
+unit ClasseLoad;
+
+interface
+
+uses
+  System.Classes, FMX.Layouts;
+
+type
+
+    TClasseLoad = class
+      class procedure LoadLayout(const LayoutMain : TLayout; const AFormClass : TComponentClass);
+    end;
+
+implementation
+
+{ TClasseLoad }
+
+class procedure TClasseLoad.LoadLayout(const LayoutMain: TLayout;
+  const AFormClass: TComponentClass);
+begin
+
+end;
+
+end.

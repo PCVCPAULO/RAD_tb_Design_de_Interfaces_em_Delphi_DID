@@ -1,0 +1,135 @@
+object FormPadrao: TFormPadrao
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 632
+  ClientWidth = 831
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object LayoutMain: TLayout
+    Align = Client
+    Size.Width = 831.000000000000000000
+    Size.Height = 632.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 592.000000000000000000
+      Size.Width = 831.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Rectangle1: TRectangle
+        Align = Client
+        Fill.Color = claDimgray
+        Size.Width = 831.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+    end
+    object Layout2: TLayout
+      Align = Left
+      Size.Width = 185.000000000000000000
+      Size.Height = 592.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Rectangle2: TRectangle
+        Align = Client
+        Size.Width = 185.000000000000000000
+        Size.Height = 592.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+    end
+    object Layout3: TLayout
+      Align = Client
+      Size.Width = 646.000000000000000000
+      Size.Height = 592.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object ToolBar2: TToolBar
+        Size.Width = 646.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Rectangle3: TRectangle
+          Align = Client
+          Fill.Color = claWhite
+          Size.Width = 646.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+      object Layout4: TLayout
+        Align = Right
+        Position.X = 491.000000000000000000
+        Position.Y = 49.000000000000000000
+        Size.Width = 155.000000000000000000
+        Size.Height = 543.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Rectangle4: TRectangle
+          Align = Client
+          Size.Width = 155.000000000000000000
+          Size.Height = 543.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+      object Layout5: TLayout
+        Align = Client
+        Size.Width = 491.000000000000000000
+        Size.Height = 543.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object TabControl1: TTabControl
+          Align = Client
+          Size.Width = 491.000000000000000000
+          Size.Height = 543.000000000000000000
+          Size.PlatformDefault = False
+          TabIndex = 1
+          TabOrder = 0
+          TabPosition = PlatformDefault
+          Sizes = (
+            491s
+            517s
+            491s
+            517s)
+          object TabItem1: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 69.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'TabItem1'
+            ExplicitSize.cx = 69.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          object TabItem2: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = True
+            Size.Width = 69.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'TabItem2'
+            ExplicitSize.cx = 69.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+        end
+      end
+    end
+  end
+end

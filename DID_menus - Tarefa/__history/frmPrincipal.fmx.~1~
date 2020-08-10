@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 630
+  ClientWidth = 794
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 794.000000000000000000
+    Size.Height = 630.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ToolBar1: TToolBar
+      Size.Width = 794.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Rectangle1: TRectangle
+        Align = Contents
+        Fill.Color = claDimgray
+        Size.Width = 794.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+    end
+    object Layout2: TLayout
+      Align = Left
+      Position.Y = 57.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 573.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Rectangle2: TRectangle
+        Align = Client
+        Fill.Color = claGray
+        Size.Width = 169.000000000000000000
+        Size.Height = 573.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object ListBox1: TListBox
+        Align = Client
+        Size.Width = 169.000000000000000000
+        Size.Height = 573.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'transparentlistboxstyle'
+        TabOrder = 1
+        DisableFocusEffect = True
+        ItemHeight = 150.000000000000000000
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 169.000000000000000000
+        Viewport.Height = 573.000000000000000000
+        object ListBoxItem1: TListBoxItem
+          Size.Width = 169.000000000000000000
+          Size.Height = 150.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'ListBoxItem1'
+        end
+        object ListBoxItem2: TListBoxItem
+          Position.Y = 150.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 150.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'ListBoxItem2'
+        end
+        object ListBoxItem3: TListBoxItem
+          Position.Y = 300.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 150.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'ListBoxItem3'
+        end
+      end
+    end
+    object LayoutMain: TLayout
+      Align = Client
+      Size.Width = 625.000000000000000000
+      Size.Height = 573.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+  end
+end

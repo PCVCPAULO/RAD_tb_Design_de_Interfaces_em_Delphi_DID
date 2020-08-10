@@ -1,0 +1,19 @@
+program Project1;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  frmPrincipal in 'frmPrincipal.pas' {Form1},
+  frmPadrao in 'frmPadrao.pas' {FormPadrao},
+  frmMenu1 in 'frmMenu1.pas' {FormMenu1},
+  ClasseLoad in 'ClasseLoad.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormPadrao, FormPadrao);
+  Application.CreateForm(TFormMenu1, FormMenu1);
+  Application.Run;
+end.

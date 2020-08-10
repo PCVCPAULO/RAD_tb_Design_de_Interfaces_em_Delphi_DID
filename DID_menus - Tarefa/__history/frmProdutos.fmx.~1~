@@ -1,0 +1,25 @@
+inherited FormPadrao1: TFormPadrao1
+  Caption = 'FormPadrao1'
+  DesignerMasterStyle = 0
+  inherited LayoutMain: TLayout
+    inherited Layout3: TLayout
+      inherited Layout5: TLayout
+        inherited TabControl1: TTabControl
+          Sizes = (
+            491s
+            517s
+            491s
+            517s)
+          inherited TabItem1: TTabItem
+            ExplicitSize.cx = 69.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem2: TTabItem
+            ExplicitSize.cx = 69.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+        end
+      end
+    end
+  end
+end

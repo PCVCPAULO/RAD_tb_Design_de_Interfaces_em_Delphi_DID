@@ -1,0 +1,64 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LayoutMain: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ListBox1: TListBox
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 0
+      DisableFocusEffect = True
+      ItemHeight = 60.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 640.000000000000000000
+      Viewport.Height = 480.000000000000000000
+      object ListBoxItem1: TListBoxItem
+        Size.Width = 640.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Novo'
+      end
+      object ListBoxItem2: TListBoxItem
+        Position.Y = 60.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Editar'
+      end
+      object ListBoxItem3: TListBoxItem
+        Position.Y = 120.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Excluir'
+      end
+      object ListBoxItem4: TListBoxItem
+        Position.Y = 180.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Voltar'
+      end
+    end
+  end
+end
