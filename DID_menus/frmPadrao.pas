@@ -41,6 +41,8 @@ uses ClasseLoad, frmMenu1;
 
 procedure TFormPadrao.FormCreate(Sender: TObject);
 begin
+    // Testando alterações no arquivo
+    
      TClasseLoad.LoadLayout(Layout2, TFormMenu1);
 end;
 
