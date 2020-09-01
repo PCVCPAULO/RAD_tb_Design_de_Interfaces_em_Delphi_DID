@@ -36,6 +36,8 @@ implementation
 
 uses ClasseLoad, frmPadrao, frmProdutos;
 
+{  Neste arquivo é para fazer a mesma coisa, só que na VCL }
+
 procedure TForm1.ListBoxItem1Click(Sender: TObject);
 begin
      TClasseLoad.LoadLayout(LayoutMain, TFormPadrao);
